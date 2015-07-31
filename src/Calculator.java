@@ -18,7 +18,7 @@ import javax.swing.border.EmptyBorder;
 public class Calculator extends JPanel implements ActionListener{
 	
 	private static final long serialVersionUID = 1L;
-	private JTextField display = new JTextField();
+	private JTextField display;
 	private char[] oper = {'/','*','-','+'};
 	private int[] num = {7,8,9,4,5,6,1,2,3,0};
 	private String value = "0";
@@ -26,7 +26,7 @@ public class Calculator extends JPanel implements ActionListener{
 	
 	public Calculator(){
 	
-		JFrame window = new JFrame("Calculator Test");
+		JFrame window = new JFrame("Calculator");
 	    window.setSize(425,425);
 	    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 	    
@@ -34,6 +34,7 @@ public class Calculator extends JPanel implements ActionListener{
 		frame.setLayout(new BorderLayout());
 	    window.add(frame);
 	    
+	    display = new JTextField();
 		display.setEditable(false);   
 	    display.setFont(new Font("Courier", Font.BOLD, 36));
 	    display.setHorizontalAlignment(JTextField.RIGHT);
